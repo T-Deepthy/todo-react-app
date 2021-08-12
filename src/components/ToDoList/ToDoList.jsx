@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-    createTodoComponent,
     deleteTodoComponent,
-    editTodoComponent,
     getTodoComponents,
   } from "../../actions/todo";
   import { useDispatch, useSelector } from "react-redux";
@@ -44,7 +42,7 @@ const ToDoList = () => {
     const deleteTodo = (item) => {
       dispatch(deleteTodoComponent(item));
       if (todoList.status === 200) {
-        message.success("Successfully deleted todo.")
+        message.success("Successfully deleted.")
       }
     };
   

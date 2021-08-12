@@ -39,11 +39,11 @@ export default (state = INITIAL_STATE, action) => {
     case types.TODO_COMPONENT_EDIT_SUCCESS:
       return {
         ...state,
-        data: state.data.map(comp => {
-          if (comp._id === action.response.data._id) {
+        data: state.data.map(edit => {
+          if (edit._id === action.response.data._id) {
             return action.response.data;
           }
-          return comp;
+          return edit;
         }),
       }
     case types.TODO_COMPONENT_EDIT_FAILED:
